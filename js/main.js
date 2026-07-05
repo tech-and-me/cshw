@@ -11,13 +11,15 @@ function findProduct(productId) {
 
 /* ---------- View switching ---------- */
 
-function showView(viewId) {
+function showView(viewId, updateNav = true) {
   document.querySelectorAll(".view").forEach((el) => {
     el.classList.toggle("view--active", el.id === viewId);
   });
-  document.querySelectorAll(".nav-link").forEach((el) => {
-    el.classList.toggle("nav-link--active", el.dataset.nav === viewId);
-  });
+  if (updateNav) {
+    document.querySelectorAll(".nav-link").forEach((el) => {
+      el.classList.toggle("nav-link--active", el.dataset.nav === viewId);
+    });
+  }
   window.scrollTo(0, 0);
   if (viewId === "view-cart") renderCartView();
 }
@@ -227,7 +229,7 @@ function setupNav() {
       const anchor = el.getAttribute("href");
       if (anchor && anchor.length > 1 && anchor.startsWith("#")) {
         const target = document.querySelector(anchor);
-        if (target) target.scrollIntoView({ behavior: "smooth" });
+        if (target) target.scrollIntoView({ behavior: "auto" });
       }
     });
   });
@@ -240,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartBadge();
   setupNav();
   setupShippingForm();
-  showView("view-home");
+  showView("view-home", false);
 });
 
 document.addEventListener("cart:changed", () => {
