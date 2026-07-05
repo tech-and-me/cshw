@@ -171,22 +171,46 @@ function setupShippingForm() {
     statusEl.textContent = "";
     statusEl.classList.remove("form-status--error");
 
-    try {
-      await Checkout.submitOrder(items, PRODUCTS, shipping);
-      Cart.clear();
-      form.reset();
-      form.classList.add("hidden");
-      document.getElementById("cart-items").classList.add("hidden");
-      document.getElementById("cart-summary").classList.add("hidden");
-      confirmationEl.classList.remove("hidden");
-      confirmationEl.textContent = "Thanks! Your order has been received, we'll confirm shortly.";
-    } catch (err) {
+    const grandTotal = Cart.getTotal();
+
+    const [orderResult, emailResult] = await Promise.allSettled([
+      Checkout.submitOrder(items, PRODUCTS, shipping),
+      EmailNotify.sendConfirmation(items, PRODUCTS, shipping, grandTotal)
+    ]);
+
+    if (orderResult.status === "rejected") {
+      console.error("Formspree order submission failed:", orderResult.reason);
+    }
+    if (emailResult.status === "rejected") {
+      console.error("EmailJS confirmation email failed:", emailResult.reason);
+    }
+
+    if (orderResult.status === "rejected") {
+      // Order was not captured at all — let the customer retry.
       statusEl.textContent = "Something went wrong submitting your order. Please try again.";
       statusEl.classList.add("form-status--error");
-    } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = "Place Order";
+      return;
     }
+
+    // Order was captured; clear the cart regardless of email outcome so the
+    // customer isn't prompted to resubmit (which would duplicate the order).
+    Cart.clear();
+    form.reset();
+    form.classList.add("hidden");
+    document.getElementById("cart-items").classList.add("hidden");
+    document.getElementById("cart-summary").classList.add("hidden");
+    confirmationEl.classList.remove("hidden");
+
+    if (emailResult.status === "fulfilled") {
+      confirmationEl.textContent = "Thanks! Your order has been received, we'll confirm shortly.";
+    } else {
+      confirmationEl.textContent = "Thanks! Your order has been received. We couldn't send a confirmation email, but we'll be in touch shortly.";
+    }
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Place Order";
   });
 }
 
