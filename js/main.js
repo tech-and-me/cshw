@@ -25,7 +25,7 @@ function renderProducts() {
   const grid = document.getElementById("product-grid");
   grid.innerHTML = PRODUCTS.map((product, pIndex) => {
     const options = product.variants
-      .map((v, i) => `<option value="${i}">${v.label} — ${formatMoney(v.price)}</option>`)
+      .map((v, i) => `<option value="${i}">${v.label} - ${formatMoney(v.price)}</option>`)
       .join("");
     return `
       <article class="product-card" data-product-id="${product.id}">

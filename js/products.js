@@ -5,7 +5,7 @@ const PRODUCTS = [
     id: "raw-cashews",
     name: "Raw Cashews",
     description: "Naturally mild and creamy, perfect for snacking or cooking.",
-    image: "images/raw-cashews.svg",
+    image: "https://images.unsplash.com/photo-1723466998040-78d7e2ef6d72?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     variants: [
       { label: "250g", price: 9.90 },
       { label: "500g", price: 17.50 },
@@ -16,7 +16,7 @@ const PRODUCTS = [
     id: "roasted-salted-cashews",
     name: "Roasted & Salted Cashews",
     description: "Oven-roasted to a golden crunch with a touch of sea salt.",
-    image: "images/roasted-salted-cashews.svg",
+    image: "https://plus.unsplash.com/premium_photo-1726768985970-dde12087d972?q=80&w=1123&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     variants: [
       { label: "250g", price: 10.90 },
       { label: "500g", price: 19.50 },
@@ -27,7 +27,7 @@ const PRODUCTS = [
     id: "honey-roasted-cashews",
     name: "Honey Roasted Cashews",
     description: "Sweet, sticky, and irresistibly crunchy.",
-    image: "images/honey-roasted-cashews.svg",
+    image: "https://images.unsplash.com/photo-1571076425089-164b93bc4936?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     variants: [
       { label: "250g", price: 12.90 },
       { label: "500g", price: 22.50 }
@@ -37,7 +37,7 @@ const PRODUCTS = [
     id: "chili-lime-cashews",
     name: "Chili Lime Cashews",
     description: "A bold, zesty kick for spice lovers.",
-    image: "images/chili-lime-cashews.svg",
+    image: "https://images.unsplash.com/photo-1509912760195-4f6cfd8cce2c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     variants: [
       { label: "250g", price: 12.90 },
       { label: "500g", price: 22.50 }
@@ -47,7 +47,7 @@ const PRODUCTS = [
     id: "dark-chocolate-cashews",
     name: "Dark Chocolate Coated Cashews",
     description: "Rich dark chocolate wrapped around a buttery cashew.",
-    image: "images/dark-chocolate-cashews.svg",
+    image: "https://images.unsplash.com/photo-1629908366426-80d33a2e2412?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     variants: [
       { label: "200g", price: 14.90 },
       { label: "400g", price: 26.00 }
@@ -57,7 +57,7 @@ const PRODUCTS = [
     id: "premium-gift-tin",
     name: "Premium Whole Cashews (Gift Tin)",
     description: "Our finest whole cashews, beautifully packaged — perfect for gifting.",
-    image: "images/premium-gift-tin.svg",
+    image: "https://images.unsplash.com/photo-1729514256038-c489695f4d79?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     variants: [
       { label: "300g tin", price: 24.90 }
     ]
