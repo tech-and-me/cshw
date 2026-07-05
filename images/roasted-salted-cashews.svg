@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#f0ddc0"/>
+  <path d="M200 100 C160 100 140 140 150 175 C158 202 185 210 200 205 C215 210 242 202 250 175 C260 140 240 100 200 100 Z" fill="#b9803f"/>
+  <circle cx="175" cy="150" r="3" fill="#fff"/>
+  <circle cx="210" cy="130" r="3" fill="#fff"/>
+  <circle cx="225" cy="170" r="3" fill="#fff"/>
+  <circle cx="190" cy="185" r="3" fill="#fff"/>
+  <text x="200" y="255" font-family="Georgia, serif" font-size="18" fill="#5c4326" text-anchor="middle">Roasted &amp; Salted</text>
+</svg>

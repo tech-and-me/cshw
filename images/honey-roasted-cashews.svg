@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#f7e2a8"/>
+  <path d="M200 100 C160 100 140 140 150 175 C158 202 185 210 200 205 C215 210 242 202 250 175 C260 140 240 100 200 100 Z" fill="#e0a63a"/>
+  <path d="M150 160 Q200 180 250 160" stroke="#c9860f" stroke-width="3" fill="none" opacity="0.6"/>
+  <text x="200" y="255" font-family="Georgia, serif" font-size="18" fill="#7a5510" text-anchor="middle">Honey Roasted</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#eee2c8"/>
+  <path d="M200 100 C160 100 140 140 150 175 C158 202 185 210 200 205 C215 210 242 202 250 175 C260 140 240 100 200 100 Z" fill="#c9622f"/>
+  <circle cx="150" cy="120" r="10" fill="#7ba05b"/>
+  <circle cx="255" cy="200" r="8" fill="#7ba05b"/>
+  <text x="200" y="255" font-family="Georgia, serif" font-size="18" fill="#6e3a1a" text-anchor="middle">Chili Lime</text>
+</svg>

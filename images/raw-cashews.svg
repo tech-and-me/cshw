@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#f1e6d3"/>
+  <path d="M200 100 C160 100 140 140 150 175 C158 202 185 210 200 205 C215 210 242 202 250 175 C260 140 240 100 200 100 Z" fill="#d9b98a"/>
+  <text x="200" y="255" font-family="Georgia, serif" font-size="20" fill="#6b5335" text-anchor="middle">Raw Cashews</text>
+</svg>
