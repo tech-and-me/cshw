@@ -15,6 +15,9 @@ function showView(viewId) {
   document.querySelectorAll(".view").forEach((el) => {
     el.classList.toggle("view--active", el.id === viewId);
   });
+  document.querySelectorAll(".nav-link").forEach((el) => {
+    el.classList.toggle("nav-link--active", el.dataset.nav === viewId);
+  });
   window.scrollTo(0, 0);
   if (viewId === "view-cart") renderCartView();
 }
